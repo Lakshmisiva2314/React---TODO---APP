@@ -1,16 +1,164 @@
-# React + Vite
+# 📝 React Todo App
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A modern **React-based Todo Application** that allows users to manage their daily tasks efficiently. The application includes user authentication, CRUD operations, Redux state management, form validation, and a responsive Bootstrap UI.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## 🚀 Features
 
-## React Compiler
+- 🔐 User Login & Registration
+- ✅ Create new todos
+- 📋 View all todos
+- ✏️ Edit existing todos
+- 🗑️ Delete todos
+- 🔍 Search todos
+- 📱 Responsive design using Bootstrap
+- ⚡ Redux Toolkit for state management
+- 📡 REST API integration using Axios
+- 📝 Form validation with Formik & Yup
+- 🍪 Authentication using Cookies
+- 🚦 Client-side routing with React Router
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+---
 
-## Expanding the ESLint configuration
+## 🛠️ Technologies Used
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+### Frontend
+
+- React 19
+- JavaScript (ES6+)
+- Bootstrap 5
+- Bootstrap Icons
+- React Router DOM
+- Redux Toolkit
+- Axios
+- Formik
+- Yup
+- Moment.js
+
+### Backend
+
+- JSON Server
+
+---
+
+## 📂 Project Structure
+
+```
+src/
+│
+├── assets/
+├── Components/
+├── Hooks/
+├── Redux/
+│   ├── Store/
+│   └── Slices/
+├── Services/
+├── Routes/
+├── App.jsx
+└── main.jsx
+```
+
+---
+
+## ⚙️ Installation
+
+### 1. Clone the repository
+
+```bash
+git clone https://github.com/Lakshmisiva2314/React---TODO---APP.git
+```
+
+### 2. Navigate to the project
+
+```bash
+cd React---TODO---APP
+```
+
+### 3. Install dependencies
+
+```bash
+npm install
+```
+
+### 4. Start the React application
+
+```bash
+npm run dev
+```
+
+### 5. Start JSON Server
+
+```bash
+npx json-server --watch db.json --port 3000
+```
+
+---
+
+## 📸 Screenshots
+
+
+screenshots/
+    dashboard.png
+    login.png
+    Register.png
+```
+
+
+### Login Page
+
+![Login](screenshots/login.png)
+
+### Dashboard
+
+![Dashboard](screenshots/dashboard.png)
+```
+
+---
+
+## 🎯 Future Improvements
+
+- Dark Mode
+- Drag & Drop Todos
+- Due Date & Reminder
+- Categories & Labels
+- Pagination
+- JWT Authentication
+- Backend with Node.js & Express
+- MongoDB Database
+- Deploy Backend to Render
+- Deploy Frontend to Vercel
+
+---
+
+## 💡 Learning Outcomes
+
+Through this project, I gained hands-on experience with:
+
+- React Components
+- React Hooks
+- Redux Toolkit
+- CRUD Operations
+- REST APIs
+- Axios
+- React Router
+- Formik & Yup
+- State Management
+- Responsive UI Design
+- Authentication Basics
+- Git & GitHub
+
+---
+
+## 👨‍💻 Author
+
+**Lakshmi Siva**
+
+GitHub:
+https://github.com/Lakshmisiva2314
+
+---
+
+## ⭐ Support
+
+If you found this project useful, consider giving it a ⭐ on GitHub.
