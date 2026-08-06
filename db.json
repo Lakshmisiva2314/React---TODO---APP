@@ -1,0 +1,53 @@
+{
+  "users": [
+    {
+      "userid": "siva",
+      "username": "siva",
+      "password": "siva",
+      "email": "gopic3879@gmail.com",
+      "id": "ha3ooAqPu5g"
+    },
+    {
+      "userid": "mani",
+      "username": "mani",
+      "password": "mani",
+      "email": "mani@666.com",
+      "id": "WFJW4V5Yl44"
+    }
+  ],
+  "appointments": [
+    {
+      "id": "UG5kd7lgMh8",
+      "title": "Meeting with client",
+      "description": "There is A client meeting with US team about the project Discussion ",
+      "date": "2026-12-23",
+      "user_id": "siva"
+    },
+    {
+      "id": "EpkMvn93PCQ",
+      "title": "Team Lunch",
+      "description": "The team is planning to conduct team lunch today at ITC kohnoor ",
+      "date": "2026-07-30",
+      "user_id": "siva"
+    },
+    {
+      "title": "",
+      "description": "",
+      "date": "2026-08-06T10:44:41.880Z",
+      "user_id": "siva",
+      "id": "0NBjK13G8Bw"
+    }
+  ],
+  "sharedAppointments": [
+    {
+      "id": "zrliBhoFgBY",
+      "title": "Team Lunch",
+      "description": "The team is planning to conduct team lunch today at ITC kohnoor ",
+      "date": "2026-07-30",
+      "user_id": "siva",
+      "sharedBy": "siva",
+      "sharedAt": "2026-07-29T06:44:46.936Z"
+    }
+  ],
+  "$schema": "./node_modules/json-server/schema.json"
+}
