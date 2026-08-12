@@ -2,6 +2,7 @@ import { Link , useNavigate } from "react-router-dom";
 import { useFormik } from "formik";
 import { useCookies } from "react-cookie";
 import axios from "axios";
+import API_URL from "../services/api";
 import { useCaptcha } from "../hooks/captcha";
 export default function UserLogin(props) {
     const [cookies, setcookies, removecookies] = useCookies(['userid']);
@@ -14,13 +15,13 @@ export default function UserLogin(props) {
             userid: '',
             password: '',
         },
-        onSubmit: (user)=> {
-            axios.get(`http://localhost:3000/users`)
+            onSubmit: (user)=> {
+            axios.get(`${API_URL}/users`)
             .then((response)=> {
                 var result = response.data.find(u => u.userid === user.userid)
                 if(result) {
                     if(result.password === user.password) {
-                        setcookies( 'userid', user.userid)
+                        setcookies( 'userid', user.userid, { path: '/' })
                         navigate('/dashboard')
                     } else {
                         alert('Invalid password')
@@ -28,6 +29,10 @@ export default function UserLogin(props) {
                 } else {
                     alert('Invalid user id')
                 }
+            })
+            .catch((err) => {
+                console.error('Login request failed', err)
+                alert('Login failed: ' + (err?.response?.data?.message || err.message || 'Network error'))
             })
         }
     })
