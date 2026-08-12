@@ -6,7 +6,7 @@ import '../node_modules/bootstrap/dist/css/bootstrap.css';
 import '../node_modules/bootstrap-icons/font/bootstrap-icons.css';
 import '../node_modules/bootstrap/dist/js/bootstrap.bundle.js';
 import { RouterProvider } from 'react-router-dom';
-import router from './routes/routes.jsx';
+import router from './Routes/routes.jsx';
 import { CookiesProvider } from 'react-cookie';
 import { Provider } from 'react-redux';
 import { store } from './store/store.jsx';
