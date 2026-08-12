@@ -4,6 +4,7 @@ import { useCallback, useEffect, useMemo, useState } from "react"
 import { useCookies } from "react-cookie"
 import { useDispatch, useSelector } from "react-redux";
 import { Link, useNavigate } from "react-router-dom";
+import API_URL from "../services/api";
 import { AddToShare, SetSharedAppointments } from '../slicers/share-slicer.jsx';
 import { shareAppointment, loadSharedAppointments } from '../services/shared-appointments.js';
 
@@ -28,7 +29,7 @@ export function UserDashboard(){
             user_id: cookies['userid']
         },
         onSubmit: (appointment)=>{
-            axios.post('http://localhost:3000/appointments', appointment)
+            axios.post(`${API_URL}/appointments`, appointment)
             .then(()=>{
                 LoadAppointments();
             })
@@ -51,7 +52,7 @@ export function UserDashboard(){
             user_id: editFormData.user_id
         },
         onSubmit: (appointment)=>{
-            axios.put(`http://localhost:3000/appointments/${appointment.id}`,appointment)
+            axios.put(`${API_URL}/appointments/${appointment.id}`,appointment)
             .then(()=>{
                 LoadAppointments();
             })
@@ -69,7 +70,7 @@ export function UserDashboard(){
     
 
     const LoadAppointments = useCallback(()=>{
-        axios.get(`http://localhost:3000/appointments`)
+        axios.get(`${API_URL}/appointments`)
         .then(response=>{
             var filteredAppointments = response.data.filter(appointment=> appointment.user_id===cookies['userid']);
             setAppointments(filteredAppointments);
@@ -85,14 +86,14 @@ export function UserDashboard(){
     }, [dispatch, LoadAppointments])
 
     const handleEditClick = useCallback((id)=>{
-         axios.get(`http://localhost:3000/appointments/${id}`)
+         axios.get(`${API_URL}/appointments/${id}`)
         .then(response=>{
             setEditFormData(response.data);
         })
     })
 
     const handleDeleteClick = useCallback((id)=>{
-         axios.get(`http://localhost:3000/appointments/${id}`)
+         axios.get(`${API_URL}/appointments/${id}`)
         .then(response=>{
             setDeleteFormData(response.data);
             
@@ -100,7 +101,7 @@ export function UserDashboard(){
     })
 
     function ConfirmDelete(id){
-        axios.delete(`http://localhost:3000/appointments/${id}`)
+        axios.delete(`${API_URL}/appointments/${id}`)
         .then(()=>{
             LoadAppointments();
         })

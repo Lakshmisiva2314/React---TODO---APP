@@ -1,7 +1,8 @@
 import axios from 'axios';
+import API_URL from "../services/api";
 
 const SHARED_APPOINTMENTS_STORAGE_KEY = 'sharedAppointments';
-const SHARED_APPOINTMENTS_URL = 'http://localhost:3000/sharedAppointments';
+const SHARED_APPOINTMENTS_URL = `${API_URL}/sharedAppointments`;
 
 export function buildSharedAppointment(appointment, sharedBy) {
     return {
